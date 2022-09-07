@@ -29,12 +29,17 @@ header {
 }
 
 .form {
-  padding: 40px;
+  padding: 20px 5% 40px;
   display: grid;
-  grid-template: 40px 40px / 1fr 1fr;
+  grid-template: 40px 40px / 1fr;
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
+  
+  @media screen and (min-width: 400px) {
+    padding: 3% 5% 40px;
+    grid-template: 40px 40px / 1fr 1fr;
+  }
 
   input {
     text-indent: 8px;
@@ -61,6 +66,7 @@ header {
     color: #4b4b4b;
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 7px;
 
     &:hover {
       background-image: radial-gradient(
@@ -86,7 +92,7 @@ header {
   place-content: center;
   position: relative;
   margin: 0 auto 40px;
-  width: var(--image-width);
+  max-width: var(--image-width);
 
   .text-box {
     position: absolute;

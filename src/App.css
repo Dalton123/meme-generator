@@ -21,12 +21,18 @@ header h1 {
 }
 
 .form {
-  padding: 40px;
+  padding: 20px 5% 40px;
   display: grid;
-  grid-template: 40px 40px/1fr 1fr;
+  grid-template: 40px 40px/1fr;
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
+}
+@media screen and (min-width: 400px) {
+  .form {
+    padding: 3% 5% 40px;
+    grid-template: 40px 40px/1fr 1fr;
+  }
 }
 .form input {
   text-indent: 8px;
@@ -43,6 +49,7 @@ header h1 {
   color: #4b4b4b;
   font-weight: bold;
   font-size: 1.2rem;
+  padding: 7px;
 }
 .form button:hover {
   background-image: radial-gradient(circle at 50% -20.71%, #e6f58f 0, #e9eb7f 10%, #ecdf6e 20%, #efd25d 30%, #f1c44d 40%, #f2b53c 50%, #f3a52d 60%, #f59522 70%, #f8851d 80%, #fa741e 90%, #fc6324 100%);
@@ -53,7 +60,7 @@ header h1 {
   place-content: center;
   position: relative;
   margin: 0 auto 40px;
-  width: var(--image-width);
+  max-width: var(--image-width);
 }
 .meme .text-box {
   position: absolute;
