@@ -1,38 +1,89 @@
-.App {
+:root {
+  --image-width: 500px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: linear-gradient(140deg, #ffc0a9 0, #ffb5a6 16.67%, #ffa9a2 33.33%, #f29d9d 50%, #de9297 66.67%, #cc8891 83.33%, #bb7f8b 100%);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+header h1 {
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 3px #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  padding: 40px;
+  display: grid;
+  grid-template: 40px 40px/1fr 1fr;
+  gap: 20px;
 }
+.form input {
+  text-indent: 8px;
+  border-radius: 12px;
+  border: none;
+  background-color: #ececec;
+}
+.form button {
+  background-image: linear-gradient(180deg, #ffe1aa 0, #ffd4a7 16.67%, #ffc7a2 33.33%, #f2b99d 50%, #e1ac97 66.67%, #d1a092 83.33%, #c2968d 100%);
+  border: none;
+  border-radius: 12px;
+  grid-column: 1/-1;
+  cursor: pointer;
+  color: #4b4b4b;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form button:hover {
+  background-image: radial-gradient(circle at 50% -20.71%, #e6f58f 0, #e9eb7f 10%, #ecdf6e 20%, #efd25d 30%, #f1c44d 40%, #f2b53c 50%, #f3a52d 60%, #f59522 70%, #f8851d 80%, #fa741e 90%, #fc6324 100%);
+}
+
+.meme {
+  display: grid;
+  place-content: center;
+  position: relative;
+  margin: 0 auto 40px;
+  width: var(--image-width);
+}
+.meme .text-box {
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+}
+.meme--image {
+  grid-column: 1/-1;
+  width: 100%;
+  max-width: 500px;
+}
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000, 2px 2px 5px #000;
+}
+.meme .bottom {
+  bottom: 0;
+}
+.meme .top {
+  top: 0;
+}
+
+/*# sourceMappingURL=App.css.map */
